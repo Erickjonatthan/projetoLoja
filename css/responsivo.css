@@ -1,0 +1,12 @@
+@media screen and (max-width: 480px) {
+    .caixa,footer{
+        width:auto;
+        text-align: center;
+    }
+    
+    nav,.caixa-pesquisa{
+        margin:10px;
+        position: static;
+    }
+
+}

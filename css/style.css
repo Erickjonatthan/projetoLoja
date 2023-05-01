@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
-@import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css');
+
 body{
     font-family: 'Prompt', sans-serif;
 }
@@ -12,33 +12,38 @@ header{
     width: 940px;
     margin: 0 auto;
 }
-#busca{
+.caixa-pesquisa{
+    display: inline-block;
     position: absolute;
-    right: 40%;
-    top: 50%;
-    background-color:#fff;
-    border:solid 1px;
-    border-radius:15px;
-    width:300px;
+    left: 30%;
+    top: 25%;
 }
-#txtBusca{
-   position: absolute;
-    right: 40%;
-    top: 30%;
-    background-color:#fff;
-    border:solid 1px;
-    border-radius:15px;
-    width:300px;
-    height: 30px;
-  
-   
-}
-.gg-search{
-    position: absolute;
-    right: 38%;
-    top: 50%;
+.barra-pesquisa {
+    border: 1px solid rgb(255, 138, 42);
+    border-radius: 0.3em;
+    padding: 0.3em;
 }
 
+.barra-pesquisa  input, .barra-pesquisa  button {
+    font-size: 1.2em;
+    border-radius: 0.2em;
+    border: none;
+    padding: 0.2em;
+}
+.barra-pesquisa  input{
+    width:280px;
+}
+.barra-pesquisa  button {
+    cursor: pointer;
+    background: none;
+    color: whitesmoke;
+}
+
+.barra-pesquisa  button:hover {
+    background-color: rgb(255, 138, 42);
+    color: whitesmoke;
+    transition: 0.5s;
+}
 nav{
     position: absolute;
     top:50%;
@@ -60,13 +65,10 @@ nav a:hover{
     transition: 0.5s;
 }
 
-
-
-
 footer{
     text-align: center;
     padding: 40px 0;
-    background: url("wood-g75153da12_640.jpg");
+    background: url("/img/wood-g75153da12_640.jpg");
 }
 .copyright{
      font-size: 20px;
