@@ -53,25 +53,58 @@ nav li{
     display: inline;
     margin-left: 15px;
 }
-nav a{
+nav .links-header{
     text-decoration:none;
     text-transform:uppercase;
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 18px;
 }
-nav a:hover{
+nav .links-header:hover{
     color: rgb(255, 138, 42);
     transition: 0.5s;
 }
 
 footer{
     text-align: center;
-    padding: 40px 0;
+    padding: 40px 40px;
     background: url("/img/wood-g75153da12_640.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .copyright{
      font-size: 20px;
      margin-top: 20px;
      
+}
+.redes-socias{
+    position: relative;
+}
+.redes-socias i{
+    margin:20px 0 0 20px;
+    font-size: 30px;
+}
+.fa-whatsapp{
+    color:green;
+}
+.fa-whatsapp:hover{
+    color:greenyellow;
+    transform: translateY(-5px) scale(1.2);
+    transition: 0.5s;
+}
+.fa-facebook{
+    color: blue;
+}
+.fa-facebook:hover{
+    color:cornflowerblue;
+    transform: translateY(-5px) scale(1.2);
+    transition: 0.5s;
+}
+.fa-instagram{
+    color:deeppink;
+}
+.fa-instagram:hover{
+    color:orangered;
+    transform: translateY(-5px) scale(1.2);
+    transition: 0.5s;
 }
