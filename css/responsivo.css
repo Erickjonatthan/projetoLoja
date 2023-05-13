@@ -1,9 +1,18 @@
 @media screen and (max-width: 480px) {
-    .caixa,footer{
+    .caixa,main,footer{
         width:auto;
         text-align: center;
     }
-    
+    main{
+        margin:40px;
+    }
+    .slider{
+        width: auto;
+    }
+    .navigation-auto,.manual-navigation{
+        width: auto;
+        margin-left:60px;
+    }
     nav,.caixa-pesquisa{
         margin:10px;
         position: static;
@@ -13,4 +22,3 @@
     }
 }
 
-}
