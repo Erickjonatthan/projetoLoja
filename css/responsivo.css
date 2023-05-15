@@ -7,12 +7,26 @@
         margin:40px;
     }
     .slider{
-        width: auto;
+        width:100%;
+        height: 240px;
+        
+    }
+
+    .slider img{
+        width: 100%;
+        height: 240px;
+    }
+    .sliders{
+        height: 240px;
+    }
+    .navigation-auto{
+        margin-top: 200px;
+
     }
     .navigation-auto,.manual-navigation{
         width: auto;
-        margin-left:60px;
-    }
+        margin-left: 20%;
+     }
     nav,.caixa-pesquisa{
         margin:10px;
         position: static;
