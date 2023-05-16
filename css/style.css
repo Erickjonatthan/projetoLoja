@@ -15,7 +15,7 @@ header{
 .caixa-pesquisa{
     display: inline-block;
     position: absolute;
-    left: 30%;
+    left: 35%;
     top: 25%;
 }
 .barra-pesquisa {
@@ -47,7 +47,7 @@ header{
 nav{
     position: absolute;
     top:50%;
-    right: 0;
+    right: -20%;
 }
 nav li{
     display: inline;
@@ -64,13 +64,7 @@ nav .links-header:hover{
     color: rgb(255, 138, 42);
     transition: 0.5s;
 }
-main h1{
-    text-align: center;
-}
-main{
-    width:940px;
-    margin:0 auto;
-}
+
 .titulo-slider{
     text-align: center;
     margin:5px 5px;
@@ -164,6 +158,58 @@ main{
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: #fff;
 }
+
+.main-login{
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left-login > h1{
+    font-size: 2em;
+    color:#77ffc0;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #2f2841;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     text-align: center;
     padding: 30px;

@@ -3,11 +3,9 @@
         width:auto;
         text-align: center;
     }
-    main{
-        margin:40px;
-    }
+    
     .slider{
-        width:100%;
+        width:auto;
         height: 240px;
         
     }
@@ -25,7 +23,7 @@
     }
     .navigation-auto,.manual-navigation{
         width: auto;
-        margin-left: 20%;
+        margin-left: 25%;
      }
     nav,.caixa-pesquisa{
         margin:10px;
