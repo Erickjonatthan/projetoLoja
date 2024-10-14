@@ -1,7 +1,7 @@
 let count = 1;
 document.getElementById("radio1").checked = true;
 
-let intervalId = setInterval(nextImage, 5000);
+let intervalId = setInterval(nextImage, 8000);
 let timeoutId;
 
 function nextImage() {
@@ -27,8 +27,8 @@ function disableAutoSlide() {
 function restartAutoSlide() {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(function() {
-    intervalId = setInterval(nextImage, 5000);
-    }, 500);
+    intervalId = setInterval(nextImage, 8000);
+    }, 1000);
 }
 
 function nextSlide() {
