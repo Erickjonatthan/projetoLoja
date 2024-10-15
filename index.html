@@ -17,12 +17,15 @@
     <header>
         <div class="caixa">
             <h1><a href="index.html"><img src="./img/logoFortPisos-removebg-preview (2).png" alt=""></a></h1>
-            <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="menu">
                 <ul>
                     <li><a class="links-header" href="index.html">Página Inicial</a></li>
                     <li><a class="links-header" href="sobre.html">Quem somos</a></li>
                     <li class="dropdown">
-                        <a class="links-header" href="produtos.html">Produtos &#x25BC;</a>
+                        <a class="links-header" href="produtos.html">Produtos</a>
+                        <div class="vertical-line"></div>
+                        <button class="dropdown-toggle button-hover">&#x25BC;</button>
                         <ul class="dropdown-content">
                             <li><a href="piso-laminado.html">Piso Laminado</a></li>
                             <li><a href="piso-vinilico.html">Piso Vinílico</a></li>
@@ -35,7 +38,7 @@
             </nav>
         </div>
     </header>
-
+    
     <main>
         <section class="slider-imagem">
             <div class="slider">
@@ -145,21 +148,27 @@
         <section class="marcas-usadas">
             <div class="texto-marca">
                 <h1 class="titulo-marca">Temos as melhores marcas do mercado</h1>
-                <p class="subtitulo-marca">Nós da Fort Pisos trabalhamos com as marcas mais renomadas e confiáveis do mercado, garantindo qualidade e durabilidade para o seu ambiente.</p>
+                <p class="subtitulo-marca">Nós da Fort Pisos trabalhamos com as marcas mais renomadas e confiáveis do
+                    mercado, garantindo qualidade e durabilidade para o seu ambiente.</p>
             </div>
             <div class="marcas-container">
                 <div class="marca">
-                    <a href="https://www.durafloor.com.br/"><img src="./img/durafloor2-removebg-preview.png" alt="Logo Durafloor"></a>
+                    <a href="https://www.durafloor.com.br/"><img src="./img/durafloor2-removebg-preview.png"
+                            alt="Logo Durafloor"></a>
                 </div>
                 <div class="marca">
-                    <a href="https://www.eucatex.com.br/pisos/"><img src="./img/download-removebg-preview.png" alt="Logo Eucafloor"></a>
+                    <a href="https://www.eucatex.com.br/pisos/"><img src="./img/download-removebg-preview.png"
+                            alt="Logo Eucafloor"></a>
                 </div>
                 <div class="marca">
-                    <a href="https://www.quick-step.com.br/pt-br"><img src="./img/images-removebg-preview.png" alt="Logo Quick Step"></a>
+                    <a href="https://www.quick-step.com.br/pt-br"><img src="./img/images-removebg-preview.png"
+                            alt="Logo Quick Step"></a>
                 </div>
             </div>
             <div class="descricao-marcas">
-                <p>Escolher a marca certa é essencial para garantir a longevidade e a beleza do seu piso. Trabalhamos com Durafloor, Eucafloor e Quick Step, marcas que são sinônimos de inovação e excelência no mercado de pisos laminados e vinílicos.</p>
+                <p>Escolher a marca certa é essencial para garantir a longevidade e a beleza do seu piso. Trabalhamos
+                    com Durafloor, Eucafloor e Quick Step, marcas que são sinônimos de inovação e excelência no mercado
+                    de pisos laminados e vinílicos.</p>
             </div>
         </section>
     </main>

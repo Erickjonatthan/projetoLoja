@@ -53,3 +53,23 @@ document.querySelectorAll('.manual-btn').forEach(btn => {
     btn.addEventListener('click', manualBtnClicked);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.dropdown-toggle');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    toggleButton.addEventListener('click', function () {
+        dropdownContent.classList.toggle('show');
+    });
+});
+
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+        menu.classList.remove('fade-in');
+    } else {
+        menu.style.display = 'block';
+        menu.classList.add('fade-in');
+    }
+}
+

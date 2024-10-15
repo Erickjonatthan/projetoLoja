@@ -1,36 +1,122 @@
-@media screen and (max-width: 480px) {
-    .caixa,footer{
-        width:auto;
-        text-align: center;
-    }
-    
-    .slider{
-        width:auto;
-        height: 240px;
-        
+@media screen and (max-width: 768px) {
+
+    body {
+        padding-top: 110px;
     }
 
-    .slider img{
+    header {
+        padding: 10px;
+    }
+
+    .vertical-line {
+        display: inline-block;
+        width: 1px;
+        /* Largura da linha */
+        height: 18px;
+        /* Altura da linha */
+        background-color: rgba(0, 0, 0, 0.411);
+        /* Cor da linha */
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        /* Escondido por padrão em dispositivos móveis */
+    }
+
+    /* Defina a animação de fade-in */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Classe para aplicar a animação */
+    .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* Itens em coluna */
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown{
+        position: relative;
+    }
+
+    .dropdown-content.show {
+        display: block;
+        width: 150px;
+        position: absolute;
+        left: 38%;
+        transform: translateX(-50%);
+    }
+
+    .caixa,
+    footer {
+        width: auto;
+        text-align: center;
+    }
+
+    .slider {
+        width: auto;
+        height: 240px;
+    }
+
+    .slider img {
         width: 100%;
         height: 240px;
     }
-    .sliders{
+
+    .sliders {
         height: 240px;
     }
-    .navigation-auto{
-        margin-top: 200px;
 
+    .navigation-auto {
+        margin-top: 200px;
     }
-    .navigation-auto,.manual-navigation{
+
+    .navigation-auto,
+    .manual-navigation {
         width: auto;
         margin-left: 25%;
-     }
-    nav,.caixa-pesquisa{
-        margin:10px;
+    }
+
+    nav,
+    .caixa-pesquisa {
+        margin: 10px;
         position: static;
     }
-    footer img{
-    width: 100%;
+
+    footer img {
+        width: 100%;
     }
 }
-
