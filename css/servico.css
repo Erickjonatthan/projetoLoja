@@ -274,7 +274,7 @@ nav li:focus-within .dropdown-content {
 footer {
     text-align: center;
     padding: 30px;
-    background: url("/img/papier-digital-a-texture-de-bois-4.jpg");
+    background: url("../img/papier-digital-a-texture-de-bois-4.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
