@@ -1,9 +1,13 @@
 let count = 1;
-document.getElementById("radio1").checked = true;
+let radio1 = document.getElementById("radio1");
+
+if (radio1) {
+    radio1.checked = true;
+}
 
 let intervalTime = 8000; // Tempo padrão do intervalo
 if (window.location.pathname.startsWith('/piso-') || window.location.pathname.startsWith('/rodape')) {
-    intervalTime = 2500; // Tempo reduzido do intervalo para páginas que começam com "piso-"
+    intervalTime = 2500; // Tempo reduzido do intervalo para páginas que começam com "piso-" ou "rodape"
 }
 
 let intervalId = setInterval(nextImage, intervalTime);
@@ -14,7 +18,10 @@ function nextImage() {
     if (count > 3) {
         count = 1;
     }
-    document.getElementById("radio" + count).checked = true;
+    let radio = document.getElementById("radio" + count);
+    if (radio) {
+        radio.checked = true;
+    }
 }
 
 function prevImage() {
@@ -22,7 +29,10 @@ function prevImage() {
     if (count < 1) {
         count = 3;
     }
-    document.getElementById("radio" + count).checked = true;
+    let radio = document.getElementById("radio" + count);
+    if (radio) {
+        radio.checked = true;
+    }
 }
 
 function disableAutoSlide() {
