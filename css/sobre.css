@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    font-family: 'Prompt', sans-serif;
+    padding-top: 100px;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+header {
+    background: linear-gradient(to right, rgb(255, 201, 157), rgb(255, 167, 90));
+    padding: 20px 0;
+    position: fixed; /* Torna o header fixo */
+    top: 0; /* Fixa no topo da página */
+    width: 100%; /* Garante que o header ocupe toda a largura da tela */
+    z-index: 1000; /* Certifique-se de que o header fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destacar o header */
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 35%;
+    right: -20%;
+}
+
+nav li {
+    display: inline-block; /* Alterado de inline para inline-block */
+    margin-left: 15px;
+    position: relative; /* Necessário para o submenu */
+}
+
+nav .links-header {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav .links-header:hover, nav .dropdown-toggle:hover {
+    color: rgb(255, 138, 42);
+    transition: 0.5s;
+}
+
+/* Estilo para o link e botão dentro do item de lista "Produtos" */
+.dropdown:hover .links-header,
+.dropdown:hover .dropdown-toggle {
+    color: rgb(255, 138, 42);
+    transition: 0.5s;
+}
+
+.vertical-line{
+    display: none;
+}
+
+/* Estilo para o submenu */
+nav .dropdown-content {
+    visibility: hidden; /* Inicialmente invisível */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Posiciona o submenu abaixo do item pai */
+    left: 0;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(-10px); /* Inicialmente deslocado para cima */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; /* Animação de opacidade, transformação e visibilidade */
+}
+
+nav .dropdown-content li {
+    display: block;
+}
+
+nav .dropdown-content li a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+nav .dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar o submenu ao passar o mouse */
+nav li:hover .dropdown-content {
+    visibility: visible; /* Torna visível */
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
+}
+
+/* Mostrar o submenu ao clicar */
+nav li:focus-within .dropdown-content {
+    visibility: visible; /* Torna visível */
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajuste conforme necessário */
+    text-align: center;
+}
+
+.titulo-pagina {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    color: #ff8400;
+    margin: 0;
+    position: absolute; /* Mantém absoluto */
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.imagem-fundo {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove padding */
+    position: relative; /* Altera para relativo */
+    z-index: 0;
+}
+
+.descricao {
+    padding: 20px;
+    background: linear-gradient(to right, #fdad70, #ffd6ae);
+    margin-top: 0; /* Remove margem superior */
+}
+
+.descricao h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.descricao ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+}
+
+.descricao li {
+    margin-bottom: 15px; /* Espaço entre os itens da lista */
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.descricao li i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    color: #552c00; /* Cor dos ícones */
+}
+
+.destaque {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.titulos {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.titulos, .subtitulos {
+    text-align: left;
+    margin: 20px;
+    
+}
+
+.subtitulos{
+    text-align: justify;
+    max-width: 80%;
+}
+
+.botao-fale-conosco {
+    display: ruby-text;
+    margin: 0 auto; /* Centraliza o botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: rgb(0, 0, 0); /* Cor do texto do botão */
+    border: none; /* Remover borda padrão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+}
+
+.botao-fale-conosco:hover {
+    background-color: #d7d7d7; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.conteudo-trabalho {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.conteudo-missao{
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+}
+
+.texto {
+    flex: 1;
+    text-align: left;
+}
+
+.imagem-missao, .imagem-trabalho {
+    max-width: 300px;
+}
+
+.imagem-trabalho {
+    margin: 20px;
+}
+
+
+.imagem-missao img, .imagem-trabalho img {
+    border: 5px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(white, white), linear-gradient(to right, #ff9747, #ffcc00);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: url("/img/papier-digital-a-texture-de-bois-4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 230px;
+}
+
+footer .contact-info {
+    text-align: right;
+    position: relative;
+    top: -135px;
+    /* Ajuste o valor conforme necessário */
+}
+
+footer .logo-fort-pisos {
+    width: 280px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.copyright {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.redes-socias {
+    position: relative;
+}
+
+.redes-socias i {
+    margin: 20px 0 0 20px;
+    font-size: 30px;
+}
+
+.fa-whatsapp {
+    color: green;
+}
+
+.fa-whatsapp:hover {
+    color: greenyellow;
+    transform: translateY(-5px) scale(1.2);
+    transition: 0.5s;
+}
+
+.fa-facebook {
+    color: blue;
+}
+
+.fa-facebook:hover {
+    color: cornflowerblue;
+    transform: translateY(-5px) scale(1.2);
+    transition: 0.5s;
+}
+
+.fa-instagram {
+    color: deeppink;
+}
+
+.fa-instagram:hover {
+    color: orangered;
+    transform: translateY(-5px) scale(1.2);
+    transition: 0.5s;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* Certifique-se de que o ícone fique acima de outros elementos */
+    display: flex;
+    flex-direction: column;
+    /* Coloca o texto acima do ícone */
+    align-items: center;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 50px;
+    /* Ajuste o tamanho conforme necessário */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
+}
+
+@keyframes blink {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: black;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.whatsapp-text {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* Espaço entre o texto e o ícone */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave */
+    position: absolute;
+    bottom: 45px;
+    /* Ajuste a posição conforme necessário */
+    right: -15px;
+    animation: blink 2s infinite;
+    /* Adiciona a animação de piscar */
+}
+
+.whatsapp-icon:hover img,
+.whatsapp-icon:hover .whatsapp-text {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do ícone e do texto em 10% */
+}
+
+footer .credit {
+    font-size: 12px;
+    /* Tamanho pequeno para ser discreto */
+    color: #777;
+    /* Cor cinza para ser discreto */
+    margin-top: 10px;
+    display: grid;
+    justify-items: center;
+    /* Centraliza os itens dentro do grid */
+}
+
+footer .credit a {
+    color: #777;
+    /* Cor cinza para ser discreto */
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    /* Ajuste conforme necessário */
+    max-width: 200px;
+    /* Define uma largura máxima para os links */
+    width: 100%;
+    /* Faz com que os links ocupem a largura máxima definida */
+    text-align: center;
+    /* Centraliza o texto dentro dos links */
+}
+
+footer .credit a:hover {
+    color: #555;
+    /* Cor um pouco mais escura ao passar o mouse */
+}
+.desenvolvedor {
+    background: #d48837;
+    color: white;
+    padding: 1em;
+    display: flex;
+}
+
+.desenvolvedor i {
+    position: relative;
+    top: -2px; /* Ajuste o valor conforme necessário */
+}
+
+.desenvolvedor p {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.fa-linkedin {
+    font-size: 20px;
+    margin: 10px;
+    color: #1562c1;
+}
+
+.fa-github {
+    font-size: 20px;
+    margin: 10px;
+    color: black;
+}
+
+.fa-linkedin:hover {
+    color: #0077B5;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-5px) scale(1.2);
+
+}
+
+.fa-github:hover {
+    color: #666666;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-5px) scale(1.2);
+}

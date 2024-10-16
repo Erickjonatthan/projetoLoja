@@ -45,7 +45,7 @@ header {
 
 nav {
     position: absolute;
-    top: 50%;
+    top: 35%;
     right: -20%;
 }
 
@@ -471,15 +471,22 @@ footer {
     background: url("/img/papier-digital-a-texture-de-bois-4.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 230px;
+}
+
+footer .contact-info {
+    text-align: right;
+    position: relative;
+    top: -135px; /* Ajuste o valor conforme necessário */
 }
 
 footer .logo-fort-pisos {
-    width: 300px; /* Ajuste o tamanho conforme necessário */
+    width: 280px; /* Ajuste o tamanho conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
 }
 
 .copyright {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
 }
 
@@ -527,6 +534,9 @@ footer .logo-fort-pisos {
     bottom: 20px;
     right: 20px;
     z-index: 1000; /* Certifique-se de que o ícone fique acima de outros elementos */
+    display: flex;
+    flex-direction: column; /* Coloca o texto acima do ícone */
+    align-items: center;
 }
 
 .whatsapp-icon img {
@@ -535,8 +545,35 @@ footer .logo-fort-pisos {
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
-.whatsapp-icon img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% */
+@keyframes blink {
+    0% {
+        color: white;
+    }
+    50% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.whatsapp-text {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaço entre o texto e o ícone */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    position: absolute;
+    bottom: 45px; /* Ajuste a posição conforme necessário */
+    right: -15px;
+    animation: blink 2s infinite; /* Adiciona a animação de piscar */
+}
+
+.whatsapp-icon:hover img,
+.whatsapp-icon:hover .whatsapp-text {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone e do texto em 10% */
 }
 
 footer .credit {
@@ -545,6 +582,8 @@ footer .credit {
     color: #777;
     /* Cor cinza para ser discreto */
     margin-top: 10px;
+    display: grid;
+    justify-items: center; /* Centraliza os itens dentro do grid */
 }
 
 footer .credit a {
@@ -552,10 +591,57 @@ footer .credit a {
     /* Cor cinza para ser discreto */
     text-decoration: none;
     display: block;
-    margin-top: 5px;
+    padding: 5px;
+    /* Ajuste conforme necessário */
+    max-width: 200px; /* Define uma largura máxima para os links */
+    width: 100%; /* Faz com que os links ocupem a largura máxima definida */
+    text-align: center; /* Centraliza o texto dentro dos links */
 }
 
 footer .credit a:hover {
     color: #555;
     /* Cor um pouco mais escura ao passar o mouse */
+}
+
+.desenvolvedor {
+    background: #d48837;
+    color: white;
+    padding: 1em;
+    display: flex;
+}
+
+.desenvolvedor i {
+    position: relative;
+    top: -2px; /* Ajuste o valor conforme necessário */
+}
+
+.desenvolvedor p {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.fa-linkedin {
+    font-size: 20px;
+    margin: 10px;
+    color: #1562c1;
+}
+
+.fa-github {
+    font-size: 20px;
+    margin: 10px;
+    color: black;
+}
+
+.fa-linkedin:hover {
+    color: #0077B5;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-5px) scale(1.2);
+
+}
+
+.fa-github:hover {
+    color: #666666;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-5px) scale(1.2);
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/pisos.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="icon" href="./img/favicon.ico" type="x-icon">
+    <title>Fort Pisos Laminados</title>
+</head>
+
+<body>
+    <header>
+        <div class="caixa">
+            <h1><a href="index.html"><img src="./img/logoFortPisos-removebg-preview (2).png" alt=""></a></h1>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="menu">
+                <ul>
+                    <li><a class="links-header" href="index.html">Página Inicial</a></li>
+                    <li><a class="links-header" href="sobre.html">Quem somos</a></li>
+                    <li class="dropdown">
+                        <a class="links-header" href="servicos.html">Serviços</a>
+                        <div class="vertical-line"></div>
+                        <button class="dropdown-toggle button-hover">&#x25BC;</button>
+                        <ul class="dropdown-content">
+                            <li><a href="piso-laminado.html">Piso Laminado</a></li>
+                            <li><a href="piso-vinilico.html">Piso Vinílico</a></li>
+                            <li><a href="rodape.html">Rodapé</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="links-header" href="orcamento.html">Orçamento</a></li>
+                    <li><a class="links-header" href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h1 class="titulo-pagina">Piso Vinílico</h1>
+            <img class="imagem-fundo" src="./img/modern-living-room-interior-design.jpg"
+                alt="Imagem de fundo">
+        </section>
+
+        <section class="slider-imagem">
+            <div class="slider">
+                <div class="sliders">
+
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+
+                    <div class="slide first">
+                        <img src="./img/modern-kitchen-interior-bright-colors.jpg" alt="imagem do piso1">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/3d-rendering-luxury-modern-living-room-with-leather-sofa-lamp.jpg" alt="imagem do piso2">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/living-room-with-nobody-it.jpg" alt="imagem do piso3">
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+
+                </div>
+
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+
+                <!-- Botões de navegação -->
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="./img/logoFortPisos2-removebg-preview (2).png" alt="logo fort pisos" class="logo-fort-pisos">
+        <p class="copyright">&#169;Copyright Fort Pisos - 2023</p>
+        <div class="redes-socias">
+            <a href="https://wa.me/5511937000541"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fort_pisos_laminados/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p class="credit">
+            <a href="https://www.flaticon.com/br/icones-gratis/trabalhos">Trabalhos ícones
+                criados por IconBaandar - Flaticon</a>
+            <a href="https://br.freepik.com/">Imagens Fornecidas por Freepik</a>
+        </p>
+        <div class="contact-info">
+            <p class="contact-us">Contate-nos</p>
+            <p class="phone-number">Telefone: (11) 93700-0541</p>
+        </div>
+    </footer>
+    <div class="desenvolvedor">
+        <p>Desenvolvido por Erick Santos</p>
+        <a href="https://www.linkedin.com/in/ericksantos/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/erickjonatthan/" target="_blank"><i class="fab fa-github"></i></a>
+
+    </div>
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/5511937000541">
+            <span class="whatsapp-text">COMPRE AQUI!</span>
+            <img src="./img/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

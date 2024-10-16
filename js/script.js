@@ -1,7 +1,12 @@
 let count = 1;
 document.getElementById("radio1").checked = true;
 
-let intervalId = setInterval(nextImage, 8000);
+let intervalTime = 8000; // Tempo padrão do intervalo
+if (window.location.pathname.startsWith('/piso-') || window.location.pathname.startsWith('/rodape')) {
+    intervalTime = 2500; // Tempo reduzido do intervalo para páginas que começam com "piso-"
+}
+
+let intervalId = setInterval(nextImage, intervalTime);
 let timeoutId;
 
 function nextImage() {
@@ -27,7 +32,7 @@ function disableAutoSlide() {
 function restartAutoSlide() {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(function() {
-    intervalId = setInterval(nextImage, 8000);
+        intervalId = setInterval(nextImage, intervalTime);
     }, 1000);
 }
 

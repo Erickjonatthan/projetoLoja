@@ -33,7 +33,7 @@
         transition: 0.5s;
     }
 
-    #menu {
+    nav {
         display: none;
         position: static;
     }
@@ -89,6 +89,11 @@
 
     .slider {
         height: 300px;
+    }
+
+    .slider-imagem{
+        display: flex;
+        justify-content: center;
     }
 
     .text-overlay {
@@ -153,16 +158,29 @@
     footer img {
         width: 100%;
     }
+
+    footer .contact-info {
+        text-align: center;
+        top: 0;
+    }
+
+    footer .logo-fort-pisos {
+        width: 200px; /* Ajuste o tamanho conforme necessário */
+    }
+
+    .imagem-trabalho{
+        display: none;
+    }
 }
 
 /* Estilos para tablets */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    #menu {
+    nav {
         display: block;
         width: 100%;
     }
 
-    #menu ul li a {
+    nav ul li a {
         font-size: 1em;
         /* Ajuste o tamanho da fonte para dispositivos móveis */
     }
@@ -171,7 +189,7 @@
 
 /* Estilos para MacBooks e telas maiores */
 @media screen and (min-width: 1025px) {
-    #menu {
+    nav {
         display: block;
         /* Exibe o menu em MacBooks e telas maiores */
     }
