@@ -73,3 +73,13 @@ function toggleMenu() {
     }
 }
 
+// Adiciona um evento de redimensionamento à janela
+window.addEventListener('resize', function() {
+    var menu = document.getElementById('menu');
+    if (window.innerWidth > 768) { // Define o valor de largura para diferenciar entre dispositivos móveis e desktops
+        menu.style.display = 'block';
+    }
+    else {
+        menu.style.display = 'none';
+    }
+});

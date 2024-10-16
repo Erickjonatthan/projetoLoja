@@ -238,7 +238,7 @@ nav li:focus-within .dropdown-content {
 }
 
 .navigation-auto div {
-    border: 2px solid blue;
+    border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -285,6 +285,7 @@ nav li:focus-within .dropdown-content {
 #radio4:checked ~ .navigation-auto .auto-btn4 {
     background-color: #fff;
 }
+
 .conteudo-principal {
     background: linear-gradient(to right, #ff9c50, #ffd6ae); /* Gradiente de fundo */
     display: flex; /* Layout flexível para alinhar texto e imagem */
